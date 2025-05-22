@@ -1,5 +1,5 @@
 import AboutImage from '../../assets/logo.jpg'
-import CV from '../../assets/Jonah002.pdf'
+import CV from '../../assets/odohjonah.pdf'
 import {HiDownload} from 'react-icons/hi'
 import data from './data'
 import Card from '../../components/Card'
@@ -28,10 +28,16 @@ const About = () => {
                     }
                 </div>
                 <p>
-                Building projects my clients love have always been my passion. Being in the web development industry for over 3 years and serving more than 70 happy clients worldwide, I'm always motivated to do more!
+                Building projects my clients love have always been my passion. Being in 
+                the tech industry for over 3 years and serving more than 21
+                 happy clients worldwide, I'm always motivated to do more!
                 </p>
                 <p>
-                Hi, my name is Jonah from Lagos, Nigeria. I'm a full-stack web developer with a Bachelors degree in Computer Science. My top priority is to get your business online the right way, giving you industry-standard design and all the functionality you need to operate smoothly online. Get in touch today with the details of your project let's get started! Check out my resume below!
+                    Hi, my name is Jonah, i am a Software Engineer based in Lagos, Nigeria, with a Bachelor's degree 
+                    in Economics, and a one-year professional training certificate in Software Engineering.
+                    During my training, I gained practical experience in DevOps, cloud engineering, 
+                    and full-stack development — enabling me to build, deploy, and manage scalable 
+                    web applications end-to-end.
                 </p>
                 <a href={CV} download className='btn primary'>Download CV <HiDownload/></a>
             </div>
