@@ -1,6 +1,5 @@
 header {
     margin-top: 5rem;
-    margin-bottom: 15rem;
     height: calc(100vh - 1rem);
     display: grid;
     place-items: center;
@@ -15,6 +14,8 @@ header {
     position: relative;
 }
 
+
+
 .header__profile {
     width: 18rem;
     height: 21rem;
@@ -24,7 +25,7 @@ header {
 }
 
 .header__container p {
-    width: 31rem;
+    width: 40rem;
     text-align: center;
     margin: 0.6rem 0 2rem;
 }
@@ -36,6 +37,7 @@ header {
 }
 
 .header__socials {
+    padding-bottom: 3rem;
     position: absolute;
     left: 0;
     bottom: 0;
