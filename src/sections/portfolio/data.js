@@ -1,5 +1,5 @@
 import Image1 from '../../assets/project1.png'
-// import Image2 from '../../assets/project2.png'
+import Image2 from '../../assets/project2.png'
 import Image3 from '../../assets/project3.png'
 import Image4 from '../../assets/project4.png'
 import Image5 from '../../assets/project5.png'
@@ -14,15 +14,15 @@ const data = [
         demo: 'http://seamossnigeria.com',
         github: 'https://github.com/omonuj'
     },
-    // {
-    //     id: 2,
-    //     category: 'frontend and backend',
-    //     image: Image2,
-    //     title: "Karrabo",
-    //     desc: "A Nigerian fintech platform offering a smart purse solution that streamlines electronic payments and collections for individuals and businesses!",
-    //     demo: 'https://karrabo.com/',
-    //     github: 'https://github.com/omonuj'
-    // },
+    {
+        id: 2,
+        category: 'frontend and backend',
+        image: Image2,
+        title: "Karrabo",
+        desc: "A Nigerian fintech platform offering a smart purse solution that streamlines electronic payments and collections for individuals and businesses!",
+        demo: 'https://karrabo.com/',
+        github: 'https://github.com/omonuj'
+    },
     {
         id: 3,
         category: 'frontend and backend',
@@ -46,7 +46,7 @@ const data = [
         category: 'backend',
         image: Image5,
         title: "LearnNow",
-        desc: "A learning managment system for online learning, this is the swagger api's which written with python",
+        desc: "A learning managment system for online learning, this is the swagger api's which is written with python",
         demo: 'https://learning-management-systems-10.onrender.com/',
         github: 'https://github.com/omonuj'
     },

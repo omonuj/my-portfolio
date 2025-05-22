@@ -9,7 +9,7 @@ import Avatar5 from '../../assets/testimonial5.png'
 const data = [
         {
                 id: 1,
-                quote: "It's truly amazing how you did exactly what I want with the little information I gave. You'll be my go-to developer from today. Highly recommend!",
+                quote: "It's truly amazing how you did exactly what I want with the little information I gave. You'll be my go-to developer from today. Highly recommend.",
                 avatar: Avatar1,
                 name: 'Mr Kenny',
                 profession: 'Founder of Jovita Mart'
@@ -26,7 +26,7 @@ const data = [
                 quote: "Impressive work, buddy. Highly recommend!",
                 avatar: Avatar3,
                 name: 'Mrs Chizoba Sylvester',
-                profession: 'Regional HR Manager at British Council'
+                profession: 'Regional HR Manager at British Council.'
         },
         {
                 id: 4,
