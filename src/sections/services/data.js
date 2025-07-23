@@ -6,7 +6,7 @@ import {AiFillAppstore} from 'react-icons/ai'
 
 const data = [
     {
-        id: 1, icon: <CiCloudOn/>, title: 'DevOps & Cloud Engineering', desc: "I automate deployments, monitor infrastructure, and ensure scalability using tools like Docker, Kubernetes, and cloud platforms like AWS. Your product will run smoothly, securely, and reliably."
+        id: 1, icon: <CiCloudOn/>, title: 'DevOps & Cloud Engineering', desc: "I automate deployments, monitor infrastructure, and ensure scalability using tools like Docker, Kubernetes, Terraform and cloud platforms like AWS and Azure. Your product will run smoothly, securely, and reliably."
     },
     {
         id: 2, icon: <RiReactjsLine/>, title: 'Frontend Development', desc: "Your product will look good and will be accessible on all devices, including mobile phones, tablets, and desktop."
