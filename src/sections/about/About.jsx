@@ -1,5 +1,5 @@
 import AboutImage from '../../assets/logo.jpg'
-import CV from '../../assets/jonah.pdf'
+import CV from '../../assets/Gjonah.pdf'
 import {HiDownload} from 'react-icons/hi'
 import data from './data'
 import Card from '../../components/Card'
@@ -33,11 +33,16 @@ const About = () => {
                  happy clients worldwide, I'm always motivated to do more!
                 </p>
                 <p>
-                    Hi, my name is Jonah, i am a Software Engineer based in Lagos, Nigeria, with a Bachelor's degree 
-                    in Economics, and a one-year professional training certificate in Software Engineering.
-                    During my training, I gained practical experience in DevOps, cloud engineering, 
-                    and full-stack development — enabling me to build, deploy, and manage scalable 
-                    web applications end-to-end.
+                    Software Engineer with over 4 years of experience building scalable and 
+                    reliable systems in fintech and beyond. Proven track record at Karabo Fintech,
+                     where I developed fraud detection systems, payment services, and real-time 
+                     transaction monitoring to enhance security and efficiency. Skilled in 
+                     microservices architecture, API integrations, and real-time data pipelines,
+                      with strong expertise in cloud platforms (AWS, GCP), CI/CD automation, 
+                      and containerized deployments using Docker and Kubernetes. Dedicated 
+                      to delivering secure, high-performance, and collaborative software solutions.
+
+
                 </p>
                 <a href={CV} download className='btn primary'>Download CV <HiDownload/></a>
             </div>

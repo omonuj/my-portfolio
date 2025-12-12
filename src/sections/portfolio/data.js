@@ -3,6 +3,7 @@ import Image2 from '../../assets/project2.png'
 import Image3 from '../../assets/project3.png'
 import Image4 from '../../assets/project4.png'
 import Image5 from '../../assets/project5.png'
+import Image6 from '../../assets/project6.png'
 
 const data = [
     {
@@ -50,6 +51,18 @@ const data = [
         demo: 'https://learning-management-systems-10.onrender.com/',
         github: 'https://github.com/omonuj'
     },
+
+       {
+        id: 6,
+        category: 'backend',
+        image: Image6,
+        title: "Litz Property",
+        desc: "Lizt is a property management platform developed by Property Kraft Africa. It focuses on simplifying rent collection and tenancy management for landlords and tenants.",
+        demo: 'https://lizt-frontend.vercel.app/',
+        github: 'https://github.com/omonuj'
+    },
+
+    
 ]
 
 
