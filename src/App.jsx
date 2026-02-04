@@ -10,59 +10,61 @@ import Footer from './sections/footer/Footer';
 import FloatingNav from './sections/floating-nav/FloatingNav';
 import Theme from './theme/Theme';
 import { useThemeContext } from './context/theme-context';
-import {useRef, useState, useEffect} from 'react'
+import { useRef, useState, useEffect, useCallback } from 'react';
 
 const App = () => {
-  const {themeState} = useThemeContext();
+  const { themeState } = useThemeContext();
 
   const mainRef = useRef();
   const [showFloatingNav, setShowFloatingNav] = useState(true);
-  const [siteYPostion, setSiteYPosition] = useState(0)
+  const [siteYPostion, setSiteYPosition] = useState(0);
 
   const showFloatingNavHandler = () => {
     setShowFloatingNav(true);
-  }
+  };
 
   const hideFloatingNavHandler = () => {
     setShowFloatingNav(false);
-  }
+  };
 
   // check if floating nav should be shown or hidden
-  const floatingNavToggleHandler = () => {
-    // check if we scrolled up or down at least 20px
-    if(siteYPostion < (mainRef?.current?.getBoundingClientRect().y - 20) || siteYPostion > (mainRef?.current?.getBoundingClientRect().y + 20)) {
+  const floatingNavToggleHandler = useCallback(() => {
+
+    // use a call backfuntion that cuases issues on prod
+    if (
+      siteYPostion < mainRef?.current?.getBoundingClientRect().y - 20 ||
+      siteYPostion > mainRef?.current?.getBoundingClientRect().y + 20
+    ) {
       showFloatingNavHandler();
     } else {
       hideFloatingNavHandler();
     }
 
     setSiteYPosition(mainRef?.current?.getBoundingClientRect().y);
-  }
+  }, [siteYPostion, mainRef]);
 
   useEffect(() => {
     const checkYPosition = setInterval(floatingNavToggleHandler, 2000);
 
     // cleanup function
     return () => clearInterval(checkYPosition);
-  }, [siteYPostion])
-
-  
+  }, [floatingNavToggleHandler]);
 
   return (
     <main className={`${themeState.primary} ${themeState.background}`} ref={mainRef}>
-        <Navbar/>
-        <Header/>
-        <About/>
-        <Services/>
-        <Portfolio/>
-        <Testimonials/>
-        <FAQs/>
-        <Contact/>
-        <Footer/>
-        <Theme/>
-        {showFloatingNav && <FloatingNav/>}
+      <Navbar />
+      <Header />
+      <About />
+      <Services />
+      <Portfolio />
+      <Testimonials />
+      <FAQs />
+      <Contact />
+      <Footer />
+      <Theme />
+      {showFloatingNav && <FloatingNav />}
     </main>
-  )
-}
+  );
+};
 
-export default App
+export default App;
