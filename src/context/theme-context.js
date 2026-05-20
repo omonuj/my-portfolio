@@ -6,9 +6,9 @@ export const ThemeContext = createContext();
 // get theme settings from local storage, or use default theme
 const initialThemeState = (() => {
   if (typeof window !== "undefined") {
-    return JSON.parse(localStorage.getItem("themeSettings")) || { primary: "color-1", background: "bg-1" };
+    return JSON.parse(localStorage.getItem("themeSettings")) || { primary: "color-1", background: "bg-2" };
   }
-  return { primary: "color-1", background: "bg-1" };
+  return { primary: "color-1", background: "bg-2" };
 })();
 
 export const ThemeProvider = ({ children }) => {

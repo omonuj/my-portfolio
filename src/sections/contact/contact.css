@@ -1,34 +1,45 @@
+#contact {
+    background: var(--bg-section);
+}
+
 .contact__container {
     width: fit-content;
+    margin-inline: auto;
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 1.2rem;
+    flex-wrap: wrap;
 }
 
 .contact__container a {
     width: 5rem;
     aspect-ratio: 1/1;
-    color: white;
-    background: var(--color-primary);
+    color: var(--color-primary);
+    background: var(--bg-card);
     display: grid;
     place-items: center;
-    font-size: 2rem;
-    border: 2px solid transparent;
+    font-size: 1.8rem;
+    border: 1px solid var(--color-border);
     border-radius: var(--border-radius-1);
+    transition: var(--transition);
 }
 
 .contact__container a:hover {
-    background: transparent;
+    background: var(--color-primary);
+    color: #fff;
     border-color: var(--color-primary);
-    color: var(--color-primary);
-    transform: translateY(-0.5rem);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px hsla(var(--primary-hue), 60%, 60%, 0.25);
 }
 
-
-
-/* MEDIA QUERIES (phones) */
+/* PHONES */
 @media screen and (max-width: 600px) {
     .contact__container {
-        gap: 1.5rem;
+        gap: 1rem;
+    }
+
+    .contact__container a {
+        width: 4.2rem;
+        font-size: 1.5rem;
     }
 }

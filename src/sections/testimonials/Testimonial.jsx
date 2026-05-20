@@ -2,7 +2,7 @@ import Card from "../../components/Card"
 
 const Testimonial = ({testimonial}) => {
   return (
-    <Card className="light">
+    <Card className="testimonial light">
         <p>{testimonial.quote}</p>
         <div className="testimonial__client">
             <div className="testimonial__client-avatar">

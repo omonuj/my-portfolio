@@ -1,0 +1,78 @@
+/* ─────────────────────────────────────────────
+   TECH ORBIT — circular orbiting badges
+───────────────────────────────────────────── */
+.tech-orbit {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* Each wrapper rotates around the circle centre */
+.tech-orbit__item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    animation: orbit-spin linear infinite;
+}
+
+@keyframes orbit-spin {
+    from { transform: rotate(0deg)   translateX(var(--radius)) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(var(--radius)) rotate(-360deg); }
+}
+
+/* The badge itself counter-rotates to always face upright */
+.tech-orbit__badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%);
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.4),
+        0 0 0 2px rgba(255, 255, 255, 0.08);
+    pointer-events: all;
+    cursor: default;
+    transition: transform 300ms ease, box-shadow 300ms ease;
+    white-space: nowrap;
+    font-family: var(--font-sans);
+}
+
+.tech-orbit__badge:hover {
+    transform: translate(-50%, -50%) scale(1.25);
+    box-shadow:
+        0 6px 24px rgba(0, 0, 0, 0.5),
+        0 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+/* Pause on hover over the whole orbit wrapper */
+.header__photo-wrap:hover .tech-orbit__item {
+    animation-play-state: paused;
+}
+
+/* TABLETS */
+@media screen and (max-width: 1024px) {
+    .tech-orbit__item {
+        --radius: 130px !important;
+    }
+
+    .tech-orbit__badge {
+        width: 40px;
+        height: 40px;
+        font-size: 0.55rem;
+    }
+}
+
+/* PHONES */
+@media screen and (max-width: 600px) {
+    .tech-orbit {
+        display: none;
+    }
+}

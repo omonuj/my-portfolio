@@ -1,19 +1,17 @@
 #backdrop {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.6);
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     z-index: 99;
     opacity: 0;
-    animation: animateBackdrop 500ms ease-in forwards;
-
+    animation: animateBackdrop 400ms ease forwards;
 }
 
 @keyframes animateBackdrop {
-to {
-    opacity: 1;
-}
+    to { opacity: 1; }
 }

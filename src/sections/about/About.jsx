@@ -1,8 +1,8 @@
-import AboutImage from '../../assets/logo.jpg'
-import CV from '../../assets/jonah odoh.pdf'
+import CV from '../../assets/Jonah_Odoh_Senior_SWE_CV.pdf'
 import {HiDownload} from 'react-icons/hi'
 import data from './data'
 import Card from '../../components/Card'
+import AboutOrbit from './AboutOrbit'
 import './about.css'
 
 const About = () => {
@@ -10,9 +10,7 @@ const About = () => {
     <section id="about" data-aos="fade-in">
         <div className="container about__container">
             <div className="about__left">
-                <div className="about__portrait">
-                    <img src={AboutImage} alt="Jonah Odoh logo" />
-                </div>
+                <AboutOrbit />
             </div>
             <div className="about__right">
                 <h2>About Me</h2>
@@ -28,21 +26,16 @@ const About = () => {
                     }
                 </div>
                 <p>
-                Building high-performance, distributed backend systems has been 
-                my passion for over 7 years. At Andela, I’ve delivered scalable, 
-                reliable solutions for global clients, impacting more than 21 organizations
-                 worldwide. I thrive on designing systems my clients love while solving complex 
-                 technical challenges with precision and efficiency.
+                    Senior Software Engineer with 7+ years designing and delivering high-availability
+                    backend systems and full-stack platforms in fintech and healthcare. Currently at
+                    Bespoke Labs building distributed AI evaluation infrastructure, and at Andela leading
+                    engineering for global client platforms supporting 10k+ active users.
                 </p>
                 <p>
-                   I am a Backend Engineer with expertise in designing and scaling 
-                   distributed systems using Python, Java, and Kubernetes, with a strong 
-                   focus on reliability, performance, and high-scale transaction processing. 
-                   Experienced in building idempotent systems, ensuring data consistency, and 
-                   implementing robust error-handling mechanisms to drive production-grade backend 
-                   solutions.
-
-
+                    My stack spans Java, Spring Boot, Python, Node.js, TypeScript, React, and Next.js,
+                    with cloud-native delivery on AWS and GCP using Docker, Kubernetes, Terraform, and
+                    CI/CD pipelines. I care deeply about reliability, observability, and writing code
+                    that other engineers are proud to maintain.
                 </p>
                 <a href={CV} download className='btn primary'>Download CV <HiDownload/></a>
             </div>

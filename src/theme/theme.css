@@ -1,107 +1,92 @@
+/* ── Theme modal ── */
 .card.theme__modal {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #dedede;
+    background: var(--bg-card);
+    border: 1px solid var(--color-border);
     z-index: 200;
     text-align: center;
-    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.2);
-    padding: 3rem;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5);
+    padding: 2.2rem 2.8rem;
     opacity: 0;
-    animation: animateModal 500ms ease-in forwards;
+    animation: animateModal 300ms ease forwards;
+    min-width: 18rem;
 }
 
 @keyframes animateModal {
-    to {
-        opacity: 1;
-    }
+    to { opacity: 1; }
 }
 
+/* Prevent card hover transform from fighting with centering */
 .card.theme__modal:hover {
-    background: #dedede; 
+    transform: translate(-50%, -50%);
+    background: var(--bg-card);
+    border-color: var(--color-border);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5);
+}
+
+.card.theme__modal h4 {
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
 }
 
 .card.theme__modal small {
-    margin-top: 0.6rem;
     display: block;
-    width: 80%;
-    margin-inline: auto;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin-bottom: 1.6rem;
 }
 
-.theme__primary-wrapper {
-    margin: 3rem 0;
-}
-
-.theme__primary-colors {
+/* Mode toggle buttons */
+.theme__mode-buttons {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 1rem;
 }
 
-.theme__primary-colors button {
-    width: 2rem;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.theme__primary-colors .color-1 {
-    background: hsl(270, 70%, 46%);
-}
-
-.theme__primary-colors .color-2 {
-    background: hsl(110, 70%, 46%);
-}
-
-.theme__primary-colors .color-3 {
-    background: hsl(240, 70%, 46%);
-}
-
-.theme__primary-colors .color-4 {
-    background: hsl(325, 70%, 46%);
-}
-
-.theme__primary-colors .color-5 {
-    background: hsl(0, 70%, 46%);
-}
-
-.theme__primary-colors .color-6 {
-    background: hsl(52, 70%, 46%);
-}
-
-
-.theme__background-colors {
+.theme__mode-btn {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 1rem;
-}
-
-.theme__background-colors button {
-    width: 7rem;
-    height: 2.5rem;
-    background: white;
-    border-radius: var(--border-radius-3);
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.6rem;
+    border-radius: var(--border-radius-2);
+    border: 1.5px solid var(--color-border);
+    background: transparent;
+    color: var(--text-secondary);
     cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 500;
+    font-family: var(--font-sans);
+    letter-spacing: 0.04em;
+    transition: var(--transition);
+    min-width: 5.5rem;
 }
 
-.theme__background-colors .bg-2 {
-    background: #111;
+.theme__mode-btn svg {
+    font-size: 1.4rem;
 }
 
+.theme__mode-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
 
+.theme__mode-btn.active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #fff;
+}
 
-/* MEDIA QUERIES (phones) */
+/* PHONES */
 @media screen and (max-width: 600px) {
     .card.theme__modal {
-        width: var(--container-width-md);
-        padding: 3rem 1.5rem;
-    }
-
-    .theme__primary-colors {
-        gap: 0.6rem;
+        width: 88vw;
+        min-width: unset;
+        padding: 1.8rem 1.5rem;
     }
 }

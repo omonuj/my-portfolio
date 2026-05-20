@@ -3,8 +3,8 @@ import Header from './sections/header/Header';
 import About from './sections/about/About';
 import Services from './sections/services/Services';
 import Portfolio from './sections/portfolio/Portfolio';
+import Experience from './sections/experience/Experience';
 import Testimonials from './sections/testimonials/Testimonials';
-import FAQs from './sections/faqs/FAQs';
 import Contact from './sections/contact/Contact';
 import Footer from './sections/footer/Footer';
 import FloatingNav from './sections/floating-nav/FloatingNav';
@@ -27,10 +27,7 @@ const App = () => {
     setShowFloatingNav(false);
   };
 
-  // check if floating nav should be shown or hidden
   const floatingNavToggleHandler = useCallback(() => {
-
-    // use a call backfuntion that cuases issues on prod
     if (
       siteYPostion < mainRef?.current?.getBoundingClientRect().y - 20 ||
       siteYPostion > mainRef?.current?.getBoundingClientRect().y + 20
@@ -45,8 +42,6 @@ const App = () => {
 
   useEffect(() => {
     const checkYPosition = setInterval(floatingNavToggleHandler, 2000);
-
-    // cleanup function
     return () => clearInterval(checkYPosition);
   }, [floatingNavToggleHandler]);
 
@@ -57,8 +52,8 @@ const App = () => {
       <About />
       <Services />
       <Portfolio />
+      <Experience />
       <Testimonials />
-      <FAQs />
       <Contact />
       <Footer />
       <Theme />

@@ -1,30 +1,31 @@
 import Modal from "../components/Modal"
-import { primaryColors, backgroundColors } from "./data"
-import PrimaryColor from "./PrimaryColor"
-import BackgroundColor from './BackgroundColor';
+import { useThemeContext } from '../context/theme-context'
+import { MdDarkMode, MdLightMode } from 'react-icons/md'
 import './theme.css'
 
 const Theme = () => {
+  const { themeState, themeHandler } = useThemeContext()
+
   return (
     <Modal className="theme__modal">
-        <h3>Customize Your Theme</h3>
-        <small>Change the primary and background color to your preference.</small>
-        <div className="theme__primary-wrapper">
-            <h5>Primary Color</h5>
-            <div className="theme__primary-colors">
-                {
-                    primaryColors.map(pColor => <PrimaryColor key={pColor.className} className={pColor.className}/>)
-                }
-            </div>
-        </div>
-        <div className="theme__background-wrapper">
-            <h5>Background Color</h5>
-            <div className="theme__background-colors">
-                {
-                    backgroundColors.map(bColor => <BackgroundColor key={bColor.className} className={bColor.className} />)
-                }
-            </div>
-        </div>
+      <h4>Appearance</h4>
+      <small>Choose your preferred display mode</small>
+      <div className="theme__mode-buttons">
+        <button
+          className={`theme__mode-btn ${themeState.background === 'bg-2' ? 'active' : ''}`}
+          onClick={() => themeHandler('bg-2')}
+        >
+          <MdDarkMode />
+          <span>Dark</span>
+        </button>
+        <button
+          className={`theme__mode-btn ${themeState.background === 'bg-1' ? 'active' : ''}`}
+          onClick={() => themeHandler('bg-1')}
+        >
+          <MdLightMode />
+          <span>Light</span>
+        </button>
+      </div>
     </Modal>
   )
 }

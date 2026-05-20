@@ -1,0 +1,251 @@
+/* ─────────────────────────────────────────
+   EXPERIENCE — Centre-line vertical timeline
+───────────────────────────────────────── */
+.experience__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+/* Vertical centre line */
+.experience__container::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--color-border) 8%,
+        var(--color-border) 92%,
+        transparent
+    );
+    transform: translateX(-50%);
+}
+
+/* Each timeline card */
+.experience__item {
+    position: relative;
+    width: 44%;
+    background: var(--bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-1);
+    padding: 1.8rem;
+    margin-bottom: 3rem;
+    transition: var(--transition);
+    cursor: default;
+}
+
+.experience__item:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 12px 36px hsla(var(--primary-hue), 60%, 60%, 0.12);
+    transform: translateY(-4px);
+}
+
+/* Alternate left / right */
+.experience__item:nth-child(odd) {
+    align-self: flex-start;
+    margin-left: 0;
+}
+
+.experience__item:nth-child(even) {
+    align-self: flex-end;
+    margin-right: 0;
+}
+
+/* Connector dot on the centre line */
+.experience__item::before {
+    content: '';
+    position: absolute;
+    top: 1.8rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    border: 2px solid var(--bg-main);
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.experience__item:hover::before {
+    box-shadow: 0 0 0 4px hsla(var(--primary-hue), 70%, 65%, 0.25);
+}
+
+/* Odd items: dot on right edge, even: left edge */
+.experience__item:nth-child(odd)::before {
+    right: -5.8%;
+    transform: translateX(50%);
+}
+
+.experience__item:nth-child(even)::before {
+    left: -5.8%;
+    transform: translateX(-50%);
+}
+
+/* Horizontal connector line from card to dot */
+.experience__item::after {
+    content: '';
+    position: absolute;
+    top: calc(1.8rem + 4px);
+    height: 1px;
+    background: var(--color-border);
+    width: 6%;
+    transition: background 300ms ease;
+}
+
+.experience__item:hover::after {
+    background: var(--color-primary);
+}
+
+.experience__item:nth-child(odd)::after {
+    right: 0;
+    transform: translateX(100%);
+}
+
+.experience__item:nth-child(even)::after {
+    left: 0;
+    transform: translateX(-100%);
+}
+
+/* Card internals */
+.experience__item-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.experience__item-title h4 {
+    color: var(--text-primary);
+    font-size: 0.97rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.experience__company {
+    color: var(--color-primary);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.experience__location {
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.experience__period {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    background: var(--bg-section);
+    border: 1px solid var(--color-border);
+    padding: 0.2rem 0.65rem;
+    border-radius: var(--border-radius-3);
+    width: fit-content;
+    margin-top: 0.3rem;
+}
+
+.experience__bullets {
+    list-style: none;
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.experience__bullets li {
+    padding-left: 1.1rem;
+    position: relative;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+}
+
+.experience__bullets li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-size: 0.6rem;
+    top: 0.38rem;
+}
+
+.experience__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+.experience__tag {
+    font-size: 0.67rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    background: transparent;
+    color: var(--color-primary);
+    padding: 0.18rem 0.55rem;
+    border-radius: var(--border-radius-3);
+    border: 1px solid hsla(var(--primary-hue), 60%, 60%, 0.35);
+    transition: var(--transition);
+}
+
+.experience__item:hover .experience__tag {
+    background: var(--color-primary);
+    color: #fff;
+    border-color: var(--color-primary);
+}
+
+/* ── TABLETS: collapse to single column ── */
+@media screen and (max-width: 1024px) {
+    .experience__container::before {
+        left: 1.2rem;
+    }
+
+    .experience__item {
+        width: 85%;
+        align-self: flex-end !important;
+        margin-right: 0 !important;
+        margin-left: auto !important;
+    }
+
+    .experience__item::before {
+        left: -8% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .experience__item::after {
+        left: 0 !important;
+        right: auto !important;
+        transform: translateX(-100%) !important;
+    }
+}
+
+/* ── PHONES ── */
+@media screen and (max-width: 600px) {
+    .experience__container::before {
+        display: none;
+    }
+
+    .experience__item {
+        width: 100%;
+        margin: 0 0 1.5rem !important;
+        align-self: initial !important;
+    }
+
+    .experience__item::before,
+    .experience__item::after {
+        display: none;
+    }
+
+    .experience__item {
+        padding: 1.3rem;
+    }
+}

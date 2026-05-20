@@ -1,51 +1,69 @@
 .services__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem 4rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
 }
 
 .card.service {
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 1.2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-1);
+    padding: 1.8rem;
+    transition: var(--transition);
+    cursor: default;
+}
+
+.card.service:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--color-primary);
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px hsla(var(--primary-hue), 60%, 60%, 0.12);
 }
 
 .service__icon {
-    background: var(--color-primary);
-    padding: 0.6rem;
-    border-radius: var(--border-radius-3);
+    background: hsla(var(--primary-hue), 60%, 60%, 0.12);
+    padding: 0.75rem;
+    border-radius: var(--border-radius-2);
     font-size: 1.5rem;
-    color: var(--color-white);
+    color: var(--color-primary);
+    border: 1px solid hsla(var(--primary-hue), 60%, 60%, 0.25);
+    flex-shrink: 0;
     transition: var(--transition);
 }
 
-.service:hover .service__icon {
-    background: var(--color-light);
-    color: var(--color-primary);
+.card.service:hover .service__icon {
+    background: var(--color-primary);
+    color: #fff;
+    border-color: var(--color-primary);
 }
 
-.service h4 {
-    margin-bottom: 0.7rem;
+.service__details h4 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 0.97rem;
+    font-weight: 600;
 }
 
+.service__details p {
+    font-size: 0.84rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
 
-
-/* MEDIA QUERIES (tablets) */
+/* TABLETS */
 @media screen and (max-width: 1024px) {
     .services__container {
-        gap: 1.5rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
     }
 }
 
-
-/* MEDIA QUERIES (phones) */
+/* PHONES */
 @media screen and (max-width: 600px) {
     .services__container {
         grid-template-columns: 1fr;
-        gap: 1.2rem;
-    }
-
-    .card.service {
-        gap: 1.2rem;
     }
 }
