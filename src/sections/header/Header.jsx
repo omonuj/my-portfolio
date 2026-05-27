@@ -29,7 +29,7 @@ const Header = () => {
 
         {/* LEFT COLUMN */}
         <div className="header__left" data-aos="fade-right">
-          <p className="header__eyebrow">Senior Software Engineer</p>
+          <p className="header__eyebrow">Senior Engineer · Backend · Platform · AI</p>
 
           <h1 className="header__name">
             Jonah<br />
@@ -37,9 +37,9 @@ const Header = () => {
           </h1>
 
           <p className="header__bio">
-            7+ years building distributed systems and full-stack platforms
-            across fintech, healthcare, and AI infrastructure.
-            I write the code, own the architecture, and ship.
+            7+ years building distributed backend systems, fintech platforms,
+            healthcare APIs, and AI infrastructure — across Bespoke Labs, Andela,
+            Stax, and Reliance Health. I write the code, own the architecture, and ship.
           </p>
 
           <div className="header__stats">

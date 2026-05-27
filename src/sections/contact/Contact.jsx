@@ -6,7 +6,7 @@ const Contact = () => {
     <section id="contact">
       <h2>Get In Touch</h2>
       <p>
-        Open to senior engineering roles, technical leadership, and interesting builds.
+        Open to Senior, Staff, and Principal-level roles across Backend Engineering, Platform Engineering, and AI/ML Infrastructure — Remote & Hybrid.
       </p>
       <div className="container contact__container" data-aos="fade-up">
         {

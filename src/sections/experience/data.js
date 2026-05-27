@@ -17,7 +17,7 @@ const data = [
         role: "Senior Software Engineer",
         company: "Andela",
         location: "New York, United States",
-        period: "02/2025 – Present",
+        period: "02/2025 – 02/2026",
         bullets: [
             "Lead full-stack engineering for global client platforms supporting 10k+ active users — covering design, implementation, testing, deployment, and production support.",
             "Reduced average API request latency by 25% and cut production incidents by ~30% through backend optimisation and architectural refactoring.",
@@ -34,9 +34,11 @@ const data = [
         bullets: [
             "Built a double-entry wallet and ledger system using Spring Boot and PostgreSQL — ACID-compliant processing of 100k+ monthly transactions at under 200ms response time.",
             "Engineered a dynamic payment routing engine cutting processing latency by 30%, with Resilience4j circuit breakers achieving 99.9% payment success rate and uptime.",
+            "Built a Retrieval-Augmented Generation (RAG) system using LangChain, OpenAI, and Pinecone to power customer and agent support query resolution — delivering context-aware AI responses and reducing escalation time.",
+            "Shipped ML models (Scikit-Learn, XGBoost) into production for real-time credit risk decisioning, turning data into product features that supported business outcomes.",
             "Developed React-based internal dashboards for real-time transaction monitoring and automated reconciliation jobs for financial auditability."
         ],
-        stack: ["Java", "Spring Boot", "PostgreSQL", "React", "TypeScript", "Resilience4j", "Docker", "AWS", "Swagger", "Linear", "GitHub"]
+        stack: ["Java", "Spring Boot", "PostgreSQL", "React", "TypeScript", "Resilience4j", "LangChain", "OpenAI", "Pinecone", "Python", "Docker", "AWS"]
     },
     {
         id: 4,
