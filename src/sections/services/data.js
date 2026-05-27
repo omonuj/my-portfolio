@@ -2,6 +2,7 @@ import { FaServer } from 'react-icons/fa'
 import { RiReactjsLine } from 'react-icons/ri'
 import { AiOutlineCloud } from 'react-icons/ai'
 import { MdHomeRepairService } from 'react-icons/md'
+import { BiBrain } from 'react-icons/bi'
 
 const data = [
     {
@@ -27,6 +28,12 @@ const data = [
         icon: <MdHomeRepairService/>,
         title: 'System Design & Architecture',
         desc: "Translating business requirements into clean, maintainable architecture — clean architecture principles, event-driven patterns, microservices design, technical documentation, and cross-functional delivery leadership."
+    },
+    {
+        id: 5,
+        icon: <BiBrain/>,
+        title: 'AI/ML Engineering',
+        desc: "Building production AI systems — RAG pipelines with LangChain, OpenAI, and Pinecone, LLM orchestration and benchmarking infrastructure, and ML model integration (Scikit-Learn, XGBoost) for real-time decision-making. Bridging backend engineering with intelligent productionisation at scale."
     }
 ]
 

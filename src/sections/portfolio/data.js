@@ -4,8 +4,18 @@ import Image3 from '../../assets/project3.png'
 import Image4 from '../../assets/reliance.png'
 import ImageKoret from '../../assets/project_koret.png'
 import Image6 from '../../assets/project6.png'
+import ImageBespoke from '../../assets/bespoke-labs.png'
 
 const data = [
+    {
+        id: 8,
+        category: 'AI/ML',
+        image: ImageBespoke,
+        title: "Bespoke Labs",
+        desc: "AI research company building infrastructure to ship reliable agents. As Senior Platform Engineer, I design and maintain distributed Kubernetes infrastructure powering LLM benchmarking, agent evaluation pipelines, and research workflows — supporting published work including OpenThoughts (used by 200+ model builders), TerminalBench, and GEPA, all accepted to ICLR 2026.",
+        demo: 'https://www.bespokelabs.ai/',
+        github: 'https://github.com/omonuj'
+    },
     {
         id: 1,
         category: 'frontend and backend',
@@ -19,7 +29,7 @@ const data = [
         id: 2,
         category: 'backend',
         image: Image2,
-        title: "Karrabo",
+        title: "Karabo",
         desc: "Nigerian fintech platform offering a smart digital wallet — engineered for reliable electronic payments and collections at scale for individuals and businesses, with secure transaction processing.",
         demo: 'https://karrabo.com/',
         github: 'https://github.com/omonuj'
